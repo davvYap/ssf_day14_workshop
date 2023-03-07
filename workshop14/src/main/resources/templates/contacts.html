@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <button><a href="/contact">Back</a></button>
+    <br />
     <h1>List of Contacts</h1>
     <table>
-        <tr data-th-each="contact : ${contacts}">
-            <td>
-                <a data-th-href="@{'/contact/' + ${contact.id}}"
-                data-th-text="${contact.id}"
-                ></a>
-            </td>
-        </tr>
+      <tr data-th-each="contact : ${contacts}">
+        <td>
+          <a
+            data-th-href="@{'/contact/' + ${contact.id}}"
+            data-th-text="${contact.id}"></a>
+        </td>
+      </tr>
     </table>
-</body>
+  </body>
 </html>
